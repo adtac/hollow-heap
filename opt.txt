@@ -1,0 +1,10 @@
+x -> 0.125x:
+ - Using an array instead of a map
+
+y -> :
+ - Allocate array only once (rankmap)
+ - Fewer stack copies (expand_rankmap)
+ - Vector instead of std::queue
+ - No safety check (decrease-key: new key < old key)
+ - Inline add_child
+ - Loop in the opposite direction (essentially set root as element with max rank)

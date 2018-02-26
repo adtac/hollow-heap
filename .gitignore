@@ -1,0 +1,17 @@
+sorting-bin
+sorting.o
+output.csv
+output-backup.csv
+a.out
+*output*
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+all_tests
+road_dijkstra

@@ -1,0 +1,20 @@
+#!/usr/bin/env zsh
+
+cmake .
+
+make all_tests
+make roads
+
+num=50
+
+for n in $((2**10)) $((2**11)) $((2**12)) $((2**13)) $((2**14)) $((2**15)) $((2**16)) $((2**17)) $((2**18)) $((2**19)); do
+  for i in $(seq 1 $num); do
+    ./all_tests $n 2>/dev/null | tail -n 1
+  done | tee benchmark_output_$n
+done
+
+for i in $(seq 1 $num); do
+  ./roads 2>/dev/null | tail -n 1
+done | tee benchmark_output_roads
+
+./graph.py | tee benchmark_output.csv

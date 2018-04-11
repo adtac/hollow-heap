@@ -115,8 +115,8 @@ public:
     }
 
     ~HollowHeap() {
-        printf("ranked = %.2lf, eqlinks = %.2lf, insert:dec = %.2lf:1\n", double(100*ranked)/links, double(100*eqlinks)/links, double(inserts)/decs);
         free(rankmap);
+        free(to_delete);
         free(nodes);
     }
 

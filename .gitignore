@@ -16,3 +16,5 @@ CTestTestfile.cmake
 all_tests
 road_dijkstra
 graphs
+roads
+test
